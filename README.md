@@ -1,3 +1,4 @@
+[Documentation is a work in progress]
 # Chromatin-remodeling scripts
 Scripts used in the publication "Lamin A/C directs nucleosome-scale chromatin remodeling to define early lineage segregation in mammals"
 
@@ -7,7 +8,18 @@ Scripts used in the publication "Lamin A/C directs nucleosome-scale chromatin re
 ### Installation
 1. Download the relevant copy of Fiji (version 20221103-1117) from [here](https://downloads.imagej.net/fiji/archive/20221103-1117/).
 2. Extract the archive and put in a location with read/write access
-3. Download the MIA v1.2.0 plugin from [here](https://github.com/mianalysis/mia/releases/download/v1.2.0/MIA_-1.2.0.jar) and place this file in the "plugins" folder of the newly-downloaded Fiji
+3. Download the MIA (v1.2.0) plugin from [here](https://github.com/mianalysis/mia/releases/download/v1.2.0/MIA_-1.2.0.jar) and place this file in the "plugins" folder of Fiji.
+4. Download the MorphoLibJ (v1.5.0) plugin from [here](https://github.com/ijpb/MorphoLibJ/releases/download/v1.5.0/MorphoLibJ_-1.5.0.jar) and place this file in the "plugins" folder of the Fiji.
+5. [StarDist](https://sites.imagej.net/StarDist/plugins/StarDist_-0.3.0.jar-20200421142655)
+6. [Clipper](https://sites.imagej.net/StarDist/jars/Clipper-6.4.2.jar-20200108164851)
+7. [commons-text](https://sites.imagej.net/StarDist/jars/commons-text-1.6.jar-20200408120155)
+8. [CSBDeep](https://sites.imagej.net/CSBDeep/jars/csbdeep-0.6.0.jar-20200808215936)
+9. [libtensorflow](https://sites.imagej.net/CSBDeep/jars/libtensorflow-1.15.0.jar-20200625011259)
+10. [libtensorflow-jni](https://sites.imagej.net/CSBDeep/jars/libtensorflow_jni-1.15.0.jar-20200625011259)
+11. [proto](https://sites.imagej.net/CSBDeep/jars/proto-1.15.0.jar-20200808215936)
+12. [tensorflow](https://sites.imagej.net/CSBDeep/jars/tensorflow-1.15.0.jar-20200625011259)
+
+13. 
 
 ### Running
 1. Launch the downloaded copy of Fiji
@@ -20,5 +32,5 @@ Scripts used in the publication "Lamin A/C directs nucleosome-scale chromatin re
 ## "2025-06-10 Density histogram.groovy"
 "2025-06-10 Density histogram.groovy" is a standalone Groovy script which can be run directly in Fiji from the script editor
 
-## "Heterochromatin_Analysis.ijm"
+## "Heterochromatin_Analysis.ijm"
 "Heterochromatin_Analysis.ijm" is an ImageJ macro which can be run directly in Fiji from the script editor
