@@ -73,6 +73,18 @@ Some modules are optional; these are identified by green or black power icons.  
    - _Load image > Gold particle file path_: If making measurements using pre-detected gold particles, this path points to a binarised image showing the gold particles.
    - _Measure bands > Band width (µm)_: Concentric bands of this width will be created around each loaded gold particle to allow for chromatin as a function of distance from gold particles to be measured.
    - _Measure bands > Max. distance (µm)_: The maximum distance from the gold particles that any band will be created.
+
+### Nearest neighbour measurements
+   - _Distances to neighbours (X) > Number of neighbours_: Statistics for distances to N nearest neighbours are calculated for up to 5 different N values.
+
+### Contour map
+   - _Draw contour map > Min. density_: The minimum density contour to display
+   - _Draw contour map > Max. density_: The maximum density contour to display
+   - _Draw contour map > Number of lines_: The number of equally-spaced contour lines to display between the mimimum and maximum densities.
+   - _Draw contour map > Show line labels_: When selected, density values will be displayed at random points along each contour line.
+   - _Add scale bar > Number of labels_: The number of values to display on the scale bar.
+   - _Add scale bar > Scale bar size_: Controls the rendered size of the scale bar.
+   - _Save contour map_: When enabled, the contour map image will be saved to the same folder as the input file, with the "_Contours" suffix.     
      
 ## Third party library note
 This workflow includes a modified version of the "Fast_filters3D" plugin from the ["MCIB3D Plugins"](https://framagit.org/mcib3d/mcib3d-plugins) suite to calculate the 3D mean filter.
