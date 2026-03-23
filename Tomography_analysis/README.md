@@ -22,15 +22,12 @@ Note: Please do not run the ImageJ updater, as this will overwrite many of these
 1. Launch the downloaded copy of Fiji
 2. Start MIA by going to Plugins > ModularImageAnalysis (MIA) > MIA
 3. In the MIA control panel that opens, click "Load" and select the "2025-05-20 Tomography analysis.mia" file.  A set of parameters will be displayed; these are detailed below in "Parameters"
-
-Results will be saved to an Excel file in the same folder as the input image (for single files) or in the selected folder when a folder is selected.
+4. Click "Run" to start processing.  A progress bar will be shown along the bottom of the MIA control panel along with information about the current processing run.
+      - Note: When processing multiple files in a folder, this will display the number of jobs running.  Click the progress text to toggle "verbose" mode.
+5. When finished, the status bar will show "Complete!".  Results will be saved to an Excel file in the same folder as the input image (for single files) or in the selected folder when a folder is selected.
 
 ## Parameters
-Note: Some modules are optional; these are identified by green or black power icons.  Clicking the power icon will toggle its state.  Modules with a grey power icon are non-optional.
-
-Note: Parameters will be shown/hidden in response to the state of other parameters and modules.  As such, not all those listed below may be shown.
-
-Note: Parameter sections can be shown/hidden by clicking on the blue separator bars.
+Some modules are optional; these are identified by green or black power icons.  Clicking the power icon will toggle its state.  Modules with a grey power icon are non-optional.  Parameters will be shown/hidden in response to the state of other parameters and modules.  As such, not all those listed below may be shown.  Parameter sections can be shown/hidden by clicking on the blue separator bars.
 
 ### File selection
    - _Input control > Input path_: Click this button to select either a file or folder to process.
