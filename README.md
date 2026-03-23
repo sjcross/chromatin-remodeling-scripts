@@ -62,20 +62,37 @@ Note: Please do not run the ImageJ updater, as this will overwrite many of these
 2. Extract the archive and put in a location with read/write access
 3. Download the following files to the "plugins" folder of Fiji:
    - [MIA (v1.7.9)](https://github.com/mianalysis/mia/releases/download/v1.7.9/MIA_-1.7.9.jar)
-   - [MorphoLibJ (v1.5.0)](https://github.com/ijpb/MorphoLibJ/releases/download/v1.5.0/MorphoLibJ_-1.5.0.jar)
-   - [StarDist (v0.3.0)](https://maven.scijava.org/content/repositories/public/de/csbdresden/StarDist_/0.3.0-scijava/StarDist_-0.3.0-scijava.jar)
+   - [MorphoLibJ (v1.6.2)](https://github.com/ijpb/MorphoLibJ/releases/download/MorphoLibJ_-1.6.2/MorphoLibJ_-1.6.2.jar)
+   - [MCIB3D Plugins (v4.1.7b)](https://sites.imagej.net/Tboudier/plugins/mcib3d-suite/mcib3d_plugins-4.1.7b.jar-20250205114700)
+       - Note: It will be necessary to remove the numbers from the end of the filename
 4. Download and extract the MIA dependency files to the "jars" folder of Fiji:
    - [MIA (v1.7.9) dependencies](https://github.com/mianalysis/mia/releases/download/v1.7.9/mia-dependencies-1.7.9.zip)
-5. Download the following files to the "jars" folder of Fiji:
-   - [Clipper (v6.4.2)](https://maven.scijava.org/content/repositories/public/de/lighti/Clipper/6.4.2/Clipper-6.4.2.jar)
-   - [CSBDeep (v0.6.0)](https://maven.scijava.org/content/repositories/public/de/csbdresden/csbdeep/0.6.0/csbdeep-0.6.0.jar)
-   - [ImageJ-Tensorflow (v1.1.6)](https://maven.scijava.org/content/repositories/public/net/imagej/imagej-tensorflow/1.1.6/imagej-tensorflow-1.1.6.jar)
-   - [BioImageIO (v0.3.9)](https://maven.scijava.org/content/repositories/public/io/bioimage/java-bioimage-io/0.3.9/java-bioimage-io-0.3.9.jar)
-   - [ImageJ-ModelZoo (v0.9.10)](https://maven.scijava.org/content/repositories/public/net/imagej/imagej-modelzoo/0.9.10/imagej-modelzoo-0.9.10.jar)
-   - [LibTensorflow (v1.15.0)](https://repo1.maven.org/maven2/org/tensorflow/libtensorflow/1.15.0/libtensorflow-1.15.0.jar)
-   - [LibTensorflow JNI (v1.15.0)](https://repo1.maven.org/maven2/org/tensorflow/libtensorflow_jni/1.15.0/libtensorflow_jni-1.15.0.jar)
-   - [Proto (v1.15.0)](https://repo1.maven.org/maven2/org/tensorflow/proto/1.15.0/proto-1.15.0.jar)
-   - [Tensorflow (v1.15.0)](https://repo1.maven.org/maven2/org/tensorflow/tensorflow/1.15.0/tensorflow-1.15.0.jar)
+5. Download the following file to the "jars" folder of Fiji:
+   - [MCIB3D Core (v4.1.7)](https://sites.imagej.net/Tboudier/plugins/mcib3d-suite/mcib3d-core-4.1.7.jar-20250122085707)
+      - Note: It will be necessary to remove the numbers from the end of the filename
+
+    
+### Running
+1. Launch the downloaded copy of Fiji
+2. Start MIA by going to Plugins > ModularImageAnalysis (MIA) > MIA
+3. In the MIA control panel that opens, click "Load" and select the "2025-05-20 Tomography analysis.mia" file.  A set of parameters will be displayed; these can be set as follows:
+   - Note: Parameters will be shown/hidden in response to the state of other parameters.  As such, not all those listed below may be shown.
+   - "File selection" section:
+      - "Input control > Input path" - Click this button to select either a file or folder to process.
+      - "Input control > Extension" - If a folder is selected in "Input path", only those files matching this extension will be processed.
+      - "Input control > Image type" - Can be set to the following:
+         - "Raw" - The input image will be in greyscale format.  As such, MIA will pass it through the image binarisation steps.
+         - "Binary" - Chromatin has already been segmented in the image.  MIA will skip straight to the morphological analysis steps.
+         - "Density" - The input image shows the density map.  MIA will only run the contour map generation steps.
+   - "Pre-processing" section:
+      - "Pre-processing > Pre-processing method" - Can be set to the following:
+         - "EM (CLAHE)" -  CLAHE-based image binarisation steps will be used.  This is intended for EM images.
+         - "EM (WEKA)" - Image binaration uses a WEKA pixel classifier to identify the chromatin.
+         - "Fluorescence" - An intensity thresholding-based approach to image binarisation.
+      - "Pre-processing > Classifier file path" - When using WEKA-based image binarisation, it is necessary to specify the WEKA classifier (.model) file.  The only requirement is that the chromatin is classified in channel 2.
+      - "Pre-processing > Save binary image" - When enabled, the binarised image will be saved to the same folder as the input file, with the "_Binary" suffix.
+    
+Results will be saved to an Excel file in the same folder as the input image (for single files) or in the selected folder when a folder is selected.
 
 ## "2025-06-10 Density histogram.groovy"
 "2025-06-10 Density histogram.groovy" is a standalone Groovy script which can be run directly in Fiji from the script editor
