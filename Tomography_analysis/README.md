@@ -1,5 +1,5 @@
 # Tomography analysis
-"Tomography analysis.mia" is a MIA workflow file designed using MIA version 1.7.9 (released 11th April 2025).  As with "2022-12-14 Nuclear edge intensity_stardist(1).mia", it is best to use a copy of Fiji configured to match those around the time of release.
+"Tomography analysis.mia" is a MIA workflow file designed using MIA version 1.7.9 (released 11th April 2025).  As with the [Nuclear edge intensity analysis](../Nuclear_edge_intensity_analysis) workflow, it is best to use a copy of Fiji configured to match those around the time of release.
 
 Note: Please do not run the ImageJ updater, as this will overwrite many of these files with newer versions and cause the workflow to run unreliably.
 
@@ -68,6 +68,9 @@ Note: Parameter sections can be shown/hidden by clicking on the blue separator b
    - _Density calculation > Save density image_: When enabled, the density image will be saved to the same folder as the input file, with the "_Density" suffix.     
 
 ### Nucleosome measurements
+   - _Load image > Nucleosome file path_: If making measurements using pre-detected nucleosomes, this path points to a binarised image showing the nucleosomes.
+   - _Measure bands > Band width (µm)_: Concentric bands of this width will be created around each loaded nucleosome to allow for chromatin as a function of distance from nucleosomes to be measured.
+   - _Measure bands > Max. distance (µm)_: The maximum distance from the nucleosomes that any band will be created.
 
 ## Third party library note
 This workflow includes a modified version of the "Fast_filters3D" plugin from the ["MCIB3D Plugins"](https://framagit.org/mcib3d/mcib3d-plugins) suite to calculate the 3D mean filter.
