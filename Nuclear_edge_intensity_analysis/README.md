@@ -55,5 +55,5 @@ Some modules are optional; these are identified by green or black power icons.  
    - _Minimum whole red intensity_: When enabled (with the power icon), this allows a minimum whole nucleus red channel intensity to be specified.
    
 ### Visualisation
-      - _Show image_: When enabled, the final outline image will be displayed as soon as it has been created.
-      - _Save image_: When enabled, the final outline image will be saved to the same folder as the input image with the suffix "_outlines".  This image needs to be opened in ImageJ/Fiji for the outlines to be visible.
+   - _Show image_: When enabled, the final outline image will be displayed as soon as it has been created.
+   - _Save image_: When enabled, the final outline image will be saved to the same folder as the input image with the suffix "_outlines".  This image needs to be opened in ImageJ/Fiji for the outlines to be visible.
