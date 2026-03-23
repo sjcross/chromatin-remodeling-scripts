@@ -72,5 +72,10 @@ Note: Parameter sections can be shown/hidden by clicking on the blue separator b
    - _Measure bands > Band width (µm)_: Concentric bands of this width will be created around each loaded nucleosome to allow for chromatin as a function of distance from nucleosomes to be measured.
    - _Measure bands > Max. distance (µm)_: The maximum distance from the nucleosomes that any band will be created.
 
+### Gold particle measurements
+   - _Load image > Gold particle file path_: If making measurements using pre-detected gold particles, this path points to a binarised image showing the gold particles.
+   - _Measure bands > Band width (µm)_: Concentric bands of this width will be created around each loaded gold particle to allow for chromatin as a function of distance from gold particles to be measured.
+   - _Measure bands > Max. distance (µm)_: The maximum distance from the gold particles that any band will be created.
+     
 ## Third party library note
 This workflow includes a modified version of the "Fast_filters3D" plugin from the ["MCIB3D Plugins"](https://framagit.org/mcib3d/mcib3d-plugins) suite to calculate the 3D mean filter.
