@@ -45,7 +45,7 @@ Note: Please do not run the ImageJ updater, as this will overwrite many of these
       - "Measure skeleton > Measure object curvature" - When enabled, the curvature of the skeleton is measured.
       - "Measure skeleton > Save skeleton image" - When enabled, a binarised form of the skeleton is saved to the same folder as the input file, with the "_Skeleton" suffix.
       - "Measure skeleton > Add intensity to CSV > Raw image path" - If reporting image intensity along the skeleton path, it is necessary to re-load the raw intensity image.  This must be explicitly stated, in case the input image for the workflow was already binarised.
-      - "Measure skeelton > Save coordinates to CSV" - When enabled, the coordinates (and optionally, intensity) are stored in a CSV file in the same folder as the input file, with the suffix "_ChromatinCoordinates.csv"
+      - "Measure skeleton > Save coordinates to CSV" - When enabled, the coordinates (and optionally, intensity) are stored in a CSV file in the same folder as the input file, with the suffix "_ChromatinCoordinates.csv"
 
 
 Results will be saved to an Excel file in the same folder as the input image (for single files) or in the selected folder when a folder is selected.
